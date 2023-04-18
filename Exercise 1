@@ -1,0 +1,29 @@
+public class App {
+
+    //precondition:
+    static boolean iWillReview = true;
+
+    //post condition:
+    static boolean iWillNotFail = true;
+    public static void main(String[] args) throws Exception {
+
+    App myApp = new App();
+
+    // precondition assertion
+    assert iWillReview != false: "I will fail :(";
+    myApp.Study();
+
+    //post condition assertion
+    assert iWillNotFail == true: "I will pass the subject :D";
+
+
+    System.out.println(iWillReview);
+    }
+
+    void Study() {
+        iWillNotFail = false;
+
+    }
+
+
+}
